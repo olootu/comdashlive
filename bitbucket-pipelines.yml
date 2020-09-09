@@ -11,7 +11,7 @@ pipelines:
             - yarn run build
             - yarn run package
             - PACKAGE_VERSION=$(npm run get-version --silent)
-            - curl -vvv -X POST --user "${BB_AUTH_STRING}" "https://api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"dist/comchain-dashboard-${PACKAGE_VERSION}.tar.gz"
+            - curl -X POST --user "${BB_AUTH_STRING}" "https://api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"dist/comchain-dashboard-${PACKAGE_VERSION}.tar.gz"
           caches:
             - nodecustom
             - yarn
