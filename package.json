@@ -7,7 +7,13 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:prod": "ng build --prod --c=production",
+    "preversion": "sh scripts/preversion.sh",
+    "release": "bash scripts/release.sh",
+    "postversion": "yarn run release",
+    "package": "sh scripts/package.sh",
+    "get-version": "echo $(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]')"
   },
   "private": true,
   "dependencies": {

@@ -1,0 +1,23 @@
+image: node:12.18
+
+pipelines:
+  branches:
+    release/*:
+      - step:
+          name: Build application
+          script:
+            - yarn global add @angular/cli
+            - yarn install
+            - yarn run build
+            - yarn run package
+            - PACKAGE_VERSION=$(npm run get-version --silent)
+            - curl -vvv -X POST --user "${BB_AUTH_STRING}" "https://api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"dist/comchain-dashboard-${PACKAGE_VERSION}.tar.gz"
+          caches:
+            - nodecustom
+            - yarn
+          artifacts:
+            - dist/**
+definitions:
+  caches:
+    nodecustom: ./node_modules
+    yarn: /usr/local/share/.cache/yarn
