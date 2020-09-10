@@ -1,6 +1,10 @@
 #!/bin/bash
 apt-get update
 apt-get install tar
-PACKAGE_VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]')
+VERSION=`sh scripts/property.sh "version"`
+NAME=`sh scripts/property.sh "name"`
 SUFFIX=$1
-cd dist; tar -czvf ./comchain-dashboard-${PACKAGE_VERSION}${SUFFIX}.tar.gz *
+
+cd dist
+rm -rf ./${NAME}-${VERSION}${SUFFIX}.tar.gz
+tar -czvf ./${NAME}-${VERSION}${SUFFIX}.tar.gz *
