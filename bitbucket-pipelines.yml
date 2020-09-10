@@ -8,7 +8,7 @@ pipelines:
           script:
             - yarn global add @angular/cli
             - yarn install
-            - yarn run build
+            - yarn run build:prod
             - yarn run package
           caches:
             - nodecustom
@@ -21,9 +21,7 @@ pipelines:
           script:
             - NAME=`sh scripts/property.sh "name"`
             - VERSION=`sh scripts/property.sh "version"`
-            - curl -X POST --user "${BB_AUTH_STRING}" \
-              "https://api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" \
-                --form files=@"dist/${NAME}-${VERSION}.tar.gz"
+            - curl -X POST --user "${BB_AUTH_STRING}" "https://api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"dist/${NAME}-${VERSION}.tar.gz"
 
       - step:
           name: Create docs
@@ -42,9 +40,7 @@ pipelines:
           script:
             - NAME=`sh scripts/property.sh "name"`
             - VERSION=`sh scripts/property.sh "version"`
-            - curl -X POST --user "${BB_AUTH_STRING}" \
-              "https://api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" \
-                --form files=@"dist/${NAME}-docs-${VERSION}.zip"
+            - curl -X POST --user "${BB_AUTH_STRING}" "https://api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"dist/${NAME}-docs-${VERSION}.zip"
 
 definitions:
   caches:
