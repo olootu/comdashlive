@@ -1,6 +1,6 @@
 #!/bin/bash
 apt-get update
-apt-get install zip unzip
+apt-get --yes --force-yes install zip unzip
 VERSION=`sh scripts/property.sh "version"`
 NAME=`sh scripts/property.sh "name"`
 cd documentation
