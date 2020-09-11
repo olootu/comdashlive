@@ -2,6 +2,19 @@ image: node:12.18
 
 pipelines:
   branches:
+    default:
+      - step:
+          name: Build application
+          script:
+            - yarn global add @angular/cli
+            - yarn install
+            - yarn run build:prod
+          caches:
+            - nodecustom
+            - yarn
+          artifacts:
+            - dist/**
+
     release/*:
       - step:
           name: Build application
