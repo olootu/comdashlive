@@ -1,0 +1,57 @@
+.login-page {
+    background: #999;
+
+    mat-card {
+        border-radius: 20px;
+    }
+
+    mat-card-content {
+        background-color: #F0F0EF;
+        margin: -15px;
+        padding: 10px 25%;
+    }
+
+    mat-card-title {
+        margin-bottom: 25px;
+        padding-left: 20px;
+    }
+
+    .login-btn {
+        background-color: #8FD1D8;
+        color: #fff;
+        border-radius: 70%;
+    }
+
+    .btn-holder {
+        margin: 0 auto;
+        width: 200px;
+    }
+}
+
+.top-header {
+    height: 75px;
+    overflow: hidden;
+    padding: 20px 60px;
+    background-color: #3F444D;
+    color: #fff;
+
+    .rowe {
+        display: flex;
+        justify-content: space-between;
+    }
+    .flex {
+        display: flex;
+    }
+
+    .mat-icon {
+        margin-top: 5px;
+    }
+
+    
+}
+
+@media(max-width: 760px){
+    .top-header {
+        padding: inherit;
+    }
+}
