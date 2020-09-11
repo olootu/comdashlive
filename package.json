@@ -1,13 +1,21 @@
 {
   "name": "comchain-dashboard",
-  "version": "0.0.0",
+  "version": "0.1.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "prebuild": "ng lint",
+    "build:prod": "yarn run prebuild && ng build --prod --c=production",
+    "preversion": "sh scripts/preversion.sh",
+    "postversion": "yarn run release",
+    "release": "sh scripts/release.sh",
+    "package": "sh scripts/package.sh",
+    "package:docs": "sh scripts/docs.sh",
+    "compodoc": "compodoc -p tsconfig.app.json"
   },
   "private": true,
   "dependencies": {
@@ -31,9 +39,10 @@
     "@angular-devkit/build-angular": "~0.1001.0",
     "@angular/cli": "~10.1.0",
     "@angular/compiler-cli": "~10.1.0",
-    "@types/node": "^12.11.1",
+    "@compodoc/compodoc": "^1.1.11",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",

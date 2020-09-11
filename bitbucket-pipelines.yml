@@ -1,0 +1,48 @@
+image: node:12.18
+
+pipelines:
+  branches:
+    release/*:
+      - step:
+          name: Build application
+          script:
+            - yarn global add @angular/cli
+            - yarn install
+            - yarn run build:prod
+            - yarn run package
+          caches:
+            - nodecustom
+            - yarn
+          artifacts:
+            - dist/**
+
+      - step:
+          name: Upload artifacts
+          script:
+            - NAME=`sh scripts/property.sh "name"`
+            - VERSION=`sh scripts/property.sh "version"`
+            - curl -X POST --user "${BB_AUTH_STRING}" "https://api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"dist/${NAME}-${VERSION}.tar.gz"
+
+      - step:
+          name: Create docs
+          script:
+            - yarn install
+            - yarn run compodoc
+            - yarn run package:docs
+          caches:
+            - nodecustom
+            - yarn
+          artifacts:
+            - dist/**
+
+      - step:
+          name: Upload docs
+          script:
+            - NAME=`sh scripts/property.sh "name"`
+            - VERSION=`sh scripts/property.sh "version"`
+            - curl -X POST --user "${BB_AUTH_STRING}" "https://api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"dist/${NAME}-docs-${VERSION}.zip"
+
+definitions:
+  caches:
+    nodecustom: ./node_modules
+    yarn: /usr/local/share/.cache/yarn
