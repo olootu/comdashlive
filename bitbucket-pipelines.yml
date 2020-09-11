@@ -42,6 +42,18 @@ pipelines:
             - VERSION=`sh scripts/property.sh "version"`
             - curl -X POST --user "${BB_AUTH_STRING}" "https://api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"dist/${NAME}-docs-${VERSION}.zip"
 
+  default:
+    - step:
+        name: Build application
+        script:
+          - yarn global add @angular/cli
+          - yarn install
+          - yarn run build:prod
+        caches:
+          - nodecustom
+          - yarn
+        artifacts:
+          - dist/**
 definitions:
   caches:
     nodecustom: ./node_modules
