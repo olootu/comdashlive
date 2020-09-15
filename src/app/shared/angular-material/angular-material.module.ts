@@ -8,6 +8,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatRadioModule } from '@angular/material/radio';
+
 
 
 const matItems = [
@@ -18,7 +23,11 @@ const matItems = [
   MatButtonModule,
   MatCardModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatTabsModule,
+  MatRadioModule
 ];
 
 @NgModule({
@@ -31,6 +40,9 @@ const matItems = [
   exports: [
     matItems
 
+  ],
+  providers: [
+    MatNativeDateModule
   ]
 })
 export class AngularMaterialModule { }

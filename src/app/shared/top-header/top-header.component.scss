@@ -5,7 +5,7 @@
     background-color: #3F444D;
     color: #fff;
 
-    .rowe {
+    .header-row {
         display: flex;
         justify-content: space-between;
     }
@@ -15,6 +15,14 @@
 
     .mat-icon {
         margin-top: 5px;
+    }
+
+    .pi {
+        padding: 5px 20px;
+    }
+    .show-icon:hover {
+        cursor: pointer;
+        color: #50AAEE;
     }
 
     

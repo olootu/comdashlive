@@ -1,9 +1,14 @@
 <div class="top-header">
-    <div class="rowe">
+    <div class="header-row">
         <div class="cogl-6">
             <div class="flex">
                 <div class="">
-                    <mat-icon aria-hidden="false" aria-label="Clear icon">clear</mat-icon>
+                    <mat-icon class="show-icon" *ngIf="showIcon" (click)="onMenuClick()" aria-hidden="false"
+                        aria-label="Menu icon">menu
+                    </mat-icon>
+                    <mat-icon class="show-icon" *ngIf="!showIcon" (click)="onMenuClick()" aria-hidden="false"
+                        aria-label="Clear icon">
+                        clear</mat-icon>
                 </div>
                 <div class="">
                     <h2 class="ml-5">Firm Name</h2>
@@ -14,13 +19,15 @@
         <div class="cogl-6">
             <div class="flex">
                 <div class="">
-                    <h2 class="ml-5">23:01:59 Thursday 09.01.2019, UK</h2>
+                    <h2 class="ml-5">
+                        <ccd-year-date-display></ccd-year-date-display>
+                    </h2>
                 </div>
                 <div class="">
-                    <mat-icon class="ml-5" aria-hidden="false" aria-label="Settings icon">settings</mat-icon>
+                    <i class="pi pi-cog"></i>
                 </div>
                 <div class="">
-                    <mat-icon class="ml-5" aria-hidden="false" aria-label="Last page icon">last_page</mat-icon>
+                    <i class="pi pi-sign-out"></i>
                 </div>
             </div>
         </div>

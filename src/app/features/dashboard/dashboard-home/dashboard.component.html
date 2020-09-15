@@ -1,0 +1,5 @@
+<ccd-top-header [showIcon]="showIcon" (ontoggleshowIcon)="ontoggleshowIcon()"></ccd-top-header>
+<ccd-toolbar *ngIf="!showIcon"></ccd-toolbar>
+<div class="content">
+    <router-outlet></router-outlet>
+</div>

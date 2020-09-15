@@ -1,0 +1,23 @@
+.mat-card.ccd-card {
+    background: lightgray;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+    mat-card-header{
+        background: #fff;
+        margin: -16px -16px 0 -16px;
+        padding: 0 10px;
+        border-radius: 10px 10px 0 0;
+    } 
+    
+    .mat-card-title{
+        font-weight: normal;
+        font-size: 16px;
+        padding-top: 10px;
+    }
+}
+::ng-deep {
+    .pi {
+    padding-top: 10px;
+    }
+}

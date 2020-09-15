@@ -1,0 +1,50 @@
+<div class="dates">
+    <ccd-card>
+        <ng-container class="mat-card-avatar">
+            <i class="pi pi-calendar cal"></i>
+        </ng-container>
+        <ng-container class="mat-card-title">
+            Dates
+        </ng-container>
+        <ng-container class="mat-card-content">
+            <div class="row">
+                <div class="col-md-8">
+                    <mat-calendar (selectedChange)="selectedDate = $event" [selected]="selectedDate"></mat-calendar>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="duration">
+                        <p>
+                            <mat-label class="date-label">From</mat-label>
+                            <mat-form-field appearance="standard">
+                                <input matInput>
+                            </mat-form-field>
+                        </p>
+                        <p>
+                            <mat-label class="date-label">To</mat-label>
+                            <mat-form-field appearance="standard">
+                                <input matInput>
+                            </mat-form-field>
+                        </p>
+
+                    </div>
+
+                </div>
+                <div>
+                    <mat-radio-group aria-label="Select an option">
+                        <mat-radio-button value="1">Today</mat-radio-button>
+                        <mat-radio-button value="2">Yesterday</mat-radio-button>
+                        <mat-radio-button value="2">Last week</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div>
+                    <mat-radio-group aria-label="Select an option">
+                        <mat-radio-button value="1">Last month</mat-radio-button>
+                        <mat-radio-button value="2">Last 90 days</mat-radio-button>
+                        <mat-radio-button value="2">Last year</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </ng-container>
+    </ccd-card>
+</div>

@@ -1,0 +1,20 @@
+<mat-card class="ccd-card">
+    <mat-card-header>
+        <div mat-card-avatar>
+            <ng-content select=".mat-card-avatar"></ng-content>
+        </div>
+        <mat-card-title>
+            <ng-content select=".mat-card-title"></ng-content>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <ng-content select=".mat-card-subtitle"></ng-content>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <ng-content select=".mat-card-image"></ng-content>
+    <mat-card-content>
+        <ng-content select=".mat-card-content"></ng-content>
+    </mat-card-content>
+    <mat-card-actions>
+        <ng-content select=".mat-card-actions"></ng-content>
+    </mat-card-actions>
+</mat-card>

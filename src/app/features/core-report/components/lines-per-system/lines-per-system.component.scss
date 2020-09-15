@@ -1,0 +1,44 @@
+.lines-per-system {
+    img {
+        width: 100%;
+    }
+
+    .figure {
+        p {
+            font-size: 30px;
+            font-weight: 800;
+            padding: 30px 0 20px 56px;
+        }
+        .total {
+            color: gray;
+            font-size: initial;
+            font-weight: initial;
+        }
+    }
+
+    .data {
+        margin-bottom: 20px;
+    }
+
+    .bottom-btn {
+        padding: 30px 0 0 56px;
+    }
+}
+
+::ng-deep{
+    .mat-tab-label {
+        width: initial;
+        height: initial !important;
+        min-width: initial !important;
+        padding: 0px 16px !important;
+
+    }
+
+    .mat-tab-header {
+        display: initial !important;
+    }
+
+    .mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination {
+        display: none !important;
+    }
+}

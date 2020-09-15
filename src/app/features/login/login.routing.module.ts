@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CoreReportComponent } from './core-report/core-report.component';
+import { LoginComponent } from './login-home/login.component';
 
 const routes: Routes = [
-    { path: '', component: CoreReportComponent }
+    { path: '', component: LoginComponent }
 ];
 
 @NgModule({
@@ -14,4 +14,4 @@ const routes: Routes = [
         RouterModule
     ]
 })
-export class CoreReportRoutingModule { }
+export class LoginRoutingModule { }

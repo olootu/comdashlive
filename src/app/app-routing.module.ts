@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CoreReportModule } from '../app/components/core-report/core-report.module';
-import { LoginModule } from '../app/login/login.module';
+import { LoginModule } from './features/login/login.module';
+import { DashboardModule } from './features/dashboard/dashboard.module';
 
 const routes: Routes = [
-  { path: '', loadChildren: '../app/login/login.module#LoginModule' },
   {
-    path: 'core-report',
-    loadChildren: '../app/components/core-report/core-report.module#CoreReportModule'
+    path: '',
+    loadChildren: '../app/features/login/login.module#LoginModule'
   },
   {
-    path: 'lines-inventory',
-    loadChildren: '../app/components/core-report/core-report.module#CoreReportModule'
-  },
+    path: 'dashboard',
+    loadChildren: '../app/features/dashboard/dashboard.module#DashboardModule'
+  }
 ];
 
 @NgModule({
