@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ccd-lines-per-system',
+  selector: 'lines-per-system',
   templateUrl: './lines-per-system.component.html',
   styleUrls: ['./lines-per-system.component.scss']
 })

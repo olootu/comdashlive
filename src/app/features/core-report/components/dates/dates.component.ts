@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ccd-dates',
+  selector: 'dates',
   templateUrl: './dates.component.html',
   styleUrls: ['./dates.component.scss']
 })

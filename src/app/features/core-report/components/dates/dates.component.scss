@@ -3,59 +3,43 @@
     .duration {
         margin-top: 30px;
     }
-}
 
-::ng-deep {
-    .p-datepicker table td > span {
-        width: initial;
-        height: initial;
-    } 
+    ::ng-deep {
+        .no-text{display: none;}
+    
+        .mat-calendar-table-header th {
+            color: #50aaee;
+        }
+    
+        .mat-form-field {
+            margin-top: -10px;
+            width: 100%;
+        }
 
-    .p-datepicker {
-       padding: initial; 
-        background: inherit;
-    }
-
-    .p-datepicker .p-datepicker-header {
-         padding: 0.5rem;
-         background: inherit;
-    }
-
-    .p-datepicker table th {
-        padding: initial;
-        color: #50aaee;
-        font-weight: normal;
-        font-size: smaller;
-    }
-
-    .mat-calendar-table-header th {
-        color: #50aaee;
-    }
-
-    .mat-form-field {
-        margin-top: -10px;
-    }
-
-    .mat-form-field-infix {
-        width: 110px !important;
-        background: #f5f5f5;
-        border-radius: 20px;
-        padding: initial !important
-    }
-
-    .mat-form-field-underline {
-        display: none !important;
-    }
-
-    .mat-radio-button {
-        padding: 10px;
-    }
-
-    .date-label {
-        display: block;
-        padding-bottom: 0;
-        margin-bottom: 0;
-        color: gray;
+        .mat-input-element {
+            background: #fff;
+            border-radius: 20px;
+            opacity: 0.6;
+        }
+    
+        .mat-form-field-infix {
+            padding: initial !important
+        }
+    
+        .mat-form-field-underline {
+            display: none !important;
+        }
+    
+        .mat-radio-button {
+            padding: 5px;
+        }
+    
+        .date-label {
+            display: block;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            color: gray;
+        }
     }
 }
 

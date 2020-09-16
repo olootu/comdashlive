@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ccd-core-report',
+  selector: 'core-report',
   templateUrl: './core-report.component.html',
   styleUrls: ['./core-report.component.scss']
 })

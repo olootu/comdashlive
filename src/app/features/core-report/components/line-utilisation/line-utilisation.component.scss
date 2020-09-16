@@ -1,0 +1,22 @@
+.line-utilisation {
+    ::ng-deep {
+        .mat-icon {
+            padding-top: initial;
+        }
+
+        .figure {
+            p {
+                font-size: 16px;
+                font-weight: 900;
+            }
+            .total {
+                color: gray;
+                font-size: initial;
+                font-weight: initial;
+            }
+        }
+    }
+    
+
+
+}

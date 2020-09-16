@@ -1,0 +1,48 @@
+<div class="no-of-location-holder">
+    <div class="region clearfix">
+        <div class="float-right">
+            <label class="mr-2">Region</label>
+            <mat-form-field appearance="fill">
+                <mat-select [(value)]="selectedFood">
+                    <mat-option></mat-option>
+                    <mat-option [value]="option.value" *ngFor="let option of foods">{{ option.viewValue }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="figure">
+        <p>17 <span class="total">In Total</span></p>
+    </div>
+
+    <div class="data">
+        <img src="../../../../../assets/no-location.png" alt="">
+    </div>
+
+    <div class="row linear-data mb-4">
+        <div class="col-md-4">
+            <ul>
+                <li>San Francisco</li>
+                <li>Montreal</li>
+                <li>New York</li>
+            </ul>
+
+        </div>
+        <div class="col-md-4">
+            <ul>
+                <li>Paris</li>
+                <li>London</li>
+                <li>Copehangen</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <ul>
+                <li>Mexico</li>
+                <li>Salvador</li>
+                <li>Maldrid</li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom-btn">
+        <lime-button>View details</lime-button>
+    </div>
+</div>

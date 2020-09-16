@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ccd-card',
+  selector: 'card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })

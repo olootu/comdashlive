@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ccd-lime-button',
+  selector: 'lime-button',
   templateUrl: './lime-button.component.html',
   styleUrls: ['./lime-button.component.scss']
 })

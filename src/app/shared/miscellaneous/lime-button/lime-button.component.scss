@@ -1,8 +1,16 @@
-.mat-raised-button {
-    &.mat-primary {
-        border-radius: 20px;
-        line-height: 25px;
-        background-color: cadetblue;
-        opacity: .6;
+
+
+.btn-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .mat-raised-button {
+        &.mat-primary {
+            border-radius: 20px;
+            line-height: 25px;
+            background-color: cadetblue;
+            opacity: .6;
+        }
     }
 }

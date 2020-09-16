@@ -1,23 +1,143 @@
-<div class="row content">
+<div class="row core-report">
+    <div class="col-md-12 clear-fix">
+        <div class="icons d-flex flex-row float-right mb-2">
+            <mat-icon class="mr-4">save_alt</mat-icon>
+            <mat-icon class="mr-4">print</mat-icon>
+            <mat-icon class="">stars</mat-icon>
+        </div>
+    </div>
     <div class="col-md-3">
         <div class="dates">
-            <ccd-dates></ccd-dates>
+            <dates></dates>
         </div>
-        <div class="ccd-lines">
-            <ccd-lines-per-system></ccd-lines-per-system>
+        <div class="lines">
+            <lines-per-system></lines-per-system>
         </div>
     </div>
     <div class="col-md-6">
         <div class="row">
             <div class="col-md-4">
-                <div class="dates">Time</div>
+                <div class="time">
+                    <card>
+                        <ng-container class="mat-card-avatar">
+                            <i class="pi pi-clock"></i>
+                        </ng-container>
+                        <ng-container class="mat-card-title">
+                            Time
+                        </ng-container>
+                        <ng-container class="mat-card-content">
+                            <div class="">
+                                <time></time>
+                            </div>
+                        </ng-container>
+                    </card>
+                </div>
+
+                <div class="line-utlisation">
+                    <card>
+                        <ng-container class="mat-card-avatar">
+                            <i class="pi pi-user-edit"></i>
+                        </ng-container>
+                        <ng-container class="mat-card-title">
+                            Line Utilisation
+                        </ng-container>
+                        <ng-container class="mat-card-content">
+                            <div class="">
+                                <line-utilisation></line-utilisation>
+                            </div>
+                        </ng-container>
+                    </card>
+                </div>
 
             </div>
             <div class="col-md-8">
-                <div class="dates">Number of Locations</div>
+                <div class="number-of-locations">
+                    <card>
+                        <ng-container class="mat-card-avatar">
+                            <i class="pi pi-map-marker"></i>
+                        </ng-container>
+                        <ng-container class="mat-card-title">
+                            Number of Locations
+                        </ng-container>
+                        <ng-container class="mat-card-content">
+                            <div class="">
+                                <number-of-locations></number-of-locations>
+                            </div>
+                        </ng-container>
+                    </card>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="number-of-devices-per-system">
+                    <card>
+                        <ng-container class="mat-card-avatar">
+                            <i class="pi pi-th-large"></i>
+                        </ng-container>
+                        <ng-container class="mat-card-title">
+                            Number of devices per system
+                        </ng-container>
+                        <ng-container class="mat-card-content">
+                            <div class="">
+                                <number-of-devices-per-system></number-of-devices-per-system>
+                            </div>
+                        </ng-container>
+                    </card>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="number-of-users-per-location">
+                    <card>
+                        <ng-container class="mat-card-avatar">
+                            <i class="pi pi-users"></i>
+                        </ng-container>
+                        <ng-container class="mat-card-title">
+                            Number of users per location
+                        </ng-container>
+                        <ng-container class="mat-card-content">
+                            <div class="">
+                                <number-of-users-per-location></number-of-users-per-location>
+                            </div>
+                        </ng-container>
+                    </card>
+                </div>
             </div>
         </div>
     </div>
     <div class="col-md-3">
-        <div class="dates">Lines percentage usage</div>
+        <div class="lines-percentage-usage">
+            <card>
+                <ng-container class="mat-card-avatar">
+                    <i class="pi pi-users"></i>
+                </ng-container>
+                <ng-container class="mat-card-title">
+                    Lines percentage usage
+                </ng-container>
+                <ng-container class="mat-card-content">
+                    <div class="">
+                        <lines-per-usage></lines-per-usage>
+                    </div>
+                </ng-container>
+            </card>
+        </div>
+
+        <div class="calls">
+            <card>
+                <ng-container class="mat-card-avatar">
+                    <!-- <i class="pi pi-users"></i> -->
+                    <mat-icon>phone_in_talk_outline</mat-icon>
+                </ng-container>
+                <ng-container class="mat-card-title">
+                    Calls
+                </ng-container>
+                <ng-container class="mat-card-content">
+                    <div class="">
+                        <calls></calls>
+                    </div>
+                </ng-container>
+            </card>
+
+        </div>
     </div>
+</div>

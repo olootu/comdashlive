@@ -1,68 +1,70 @@
-<div class="tool-bar clearfix">
-    <mat-icon class="bg-light float-right mr-3" fxHide="true" fxShow.xs (click)="toggleMenu()" aria-hidden="false"
-        aria-label="Menu icon">menu
-    </mat-icon>
-    <div class="large-nav" *ngIf="showMenu" fxLayout="row" fxLayout.xs="column" color="">
-        <div class="item">
-            <a routerLink="/dashboard/core-report" routerLinkActive="active">
-                <span>Core <br>Report
-                </span>
-            </a>
-        </div>
-        <div class="item">
-            <a routerLink="/dashboard/lines-inventory" routerLinkActive="active">
-                <span>Lines <br>Inventory
-                </span>
-            </a>
-        </div>
+<div class="tool-bar">
+    <div class="header-nav-holder clearfix">
+        <mat-icon class="bg-light float-right mr-3" fxHide="true" fxShow.xs (click)="toggleMenu()" aria-hidden="false"
+            aria-label="Menu icon">menu
+        </mat-icon>
+        <div class="large-nav" *ngIf="showMenu" fxLayout="row" fxLayout.xs="column" color="">
+            <div class="item">
+                <a routerLink="/dashboard/core-report" routerLinkActive="active">
+                    <span>Core <br>Report
+                    </span>
+                </a>
+            </div>
+            <div class="item">
+                <a routerLink="/dashboard/lines-inventory" routerLinkActive="active">
+                    <span>Lines <br>Inventory
+                    </span>
+                </a>
+            </div>
 
-        <div class="item">
-            <a routerLink="/dashboard/line-utilisation" routerLinkActive="active">
-                <span>Line Utilisation <br>Report
-                </span>
-            </a>
-        </div>
+            <div class="item">
+                <a routerLink="/dashboard/line-utilisation" routerLinkActive="active">
+                    <span>Line Utilisation <br>Report
+                    </span>
+                </a>
+            </div>
 
-        <div class="item">
-            <a routerLink="/dashboard/line-underutilisation" routerLinkActive="active">
-                <span>Line under <br>% utilisation
-                </span>
-            </a>
-        </div>
+            <div class="item">
+                <a routerLink="/dashboard/line-underutilisation" routerLinkActive="active">
+                    <span>Line under <br>% utilisation
+                    </span>
+                </a>
+            </div>
 
-        <div class="item">
-            <a routerLink="/dashboard/Usage-report" routerLinkActive="active">
-                <span>Usage report <br>By User
-                </span>
-            </a>
-        </div>
+            <div class="item">
+                <a routerLink="/dashboard/Usage-report" routerLinkActive="active">
+                    <span>Usage report <br>By User
+                    </span>
+                </a>
+            </div>
 
-        <div class="item">
-            <a routerLink="/dashboard/Users-by-location" routerLinkActive="active">
-                <span>Usage By <br>Location
-                </span>
-            </a>
-        </div>
+            <div class="item">
+                <a routerLink="/dashboard/Users-by-location" routerLinkActive="active">
+                    <span>Usage By <br>Location
+                    </span>
+                </a>
+            </div>
 
-        <div class="item">
-            <a routerLink="/dashboard/devices-by-system" routerLinkActive="active">
-                <span>Devices per <br>System
-                </span>
-            </a>
-        </div>
+            <div class="item">
+                <a routerLink="/dashboard/devices-by-system" routerLinkActive="active">
+                    <span>Devices per <br>System
+                    </span>
+                </a>
+            </div>
 
-        <div class="item">
-            <a routerLink="/dashboard/location" routerLinkActive="active">
-                <span>Location
-                </span>
-            </a>
-        </div>
+            <div class="item">
+                <a routerLink="/dashboard/location" routerLinkActive="active">
+                    <span>Location
+                    </span>
+                </a>
+            </div>
 
-        <div class="item">
-            <a routerLink="/dashboard/connections" routerLinkActive="active">
-                <span>Connections
-                </span>
-            </a>
+            <div class="item">
+                <a routerLink="/dashboard/connections" routerLinkActive="active">
+                    <span>Connections
+                    </span>
+                </a>
+            </div>
         </div>
     </div>
 

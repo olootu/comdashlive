@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'ccd-top-header',
+  selector: 'top-header',
   templateUrl: './top-header.component.html',
   styleUrls: ['./top-header.component.scss']
 })

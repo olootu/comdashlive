@@ -3,17 +3,22 @@
     background-color: #6B7077;
     padding: 10px 0px;
 
-    a {
-        color: #fff;
-    }
+    .header-nav-holder {
+        width: 97%;
+        margin: 0 auto;
 
-    .active {
-        color: #50aaee;
-    }
-
-    .large-nav {
-        display: flex;
-        justify-content: space-around;
+        a {
+            color: #fff;
+        }
+    
+        .active {
+            color: #50aaee;
+        }
+    
+        .large-nav {
+            display: flex;
+            justify-content: space-around;
+        }
     }
 }
 
