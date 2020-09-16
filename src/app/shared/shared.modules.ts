@@ -11,6 +11,7 @@ import { TopHeaderComponent } from './top-header/top-header.component';
 import { YearDateDisplayComponent } from './year-date-display/year-date-display.component';
 import { CardComponent } from './miscellaneous/card/card.component';
 import { LimeButtonComponent } from './miscellaneous/lime-button/lime-button.component';
+import { TotalFigureComponent } from './miscellaneous/total-figure/total-figure.component';
 
 
 
@@ -20,7 +21,8 @@ import { LimeButtonComponent } from './miscellaneous/lime-button/lime-button.com
         TopHeaderComponent,
         YearDateDisplayComponent,
         CardComponent,
-        LimeButtonComponent
+        LimeButtonComponent,
+        TotalFigureComponent
     ],
     imports: [
         CommonModule,
@@ -37,7 +39,8 @@ import { LimeButtonComponent } from './miscellaneous/lime-button/lime-button.com
         FlexLayoutModule,
         CardComponent,
         PrimeNgModule,
-        LimeButtonComponent
+        LimeButtonComponent,
+        TotalFigureComponent
     ],
 })
 export class SharedModule { }

@@ -1,0 +1,19 @@
+
+.total-figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .figure {
+        p {
+            font-size: 30px;
+            font-weight: 800;
+            padding: 30px 0 20px 56px;
+        }
+        .total {
+            color: gray;
+            font-size: initial;
+            font-weight: initial;
+        }
+    }
+}
