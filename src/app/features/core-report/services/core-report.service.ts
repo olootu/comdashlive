@@ -9,11 +9,11 @@ import { Observable } from 'rxjs';
 export class CoreReportsService {
 
 
-  url = '/v1/community';
+  url = '/v1/product';
 
   constructor(private http: HttpClient) { }
 
-  getData() {
-    return this.http.get<Observable<any>>(this.url).subscribe(data => { console.log(data) })
+  getData(): any {
+    return this.http.get<Observable<any>>(this.url).subscribe(data => { console.log(data); });
   }
 }
