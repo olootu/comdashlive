@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
@@ -12,6 +13,7 @@ import { YearDateDisplayComponent } from './year-date-display/year-date-display.
 import { CardComponent } from './miscellaneous/card/card.component';
 import { LimeButtonComponent } from './miscellaneous/lime-button/lime-button.component';
 import { TotalFigureComponent } from './miscellaneous/total-figure/total-figure.component';
+import { AuthInterceptor } from '../AuthInterceptor';
 
 
 
@@ -29,7 +31,8 @@ import { TotalFigureComponent } from './miscellaneous/total-figure/total-figure.
         RouterModule,
         AngularMaterialModule,
         FlexLayoutModule,
-        PrimeNgModule
+        PrimeNgModule,
+        HttpClientModule
     ],
     exports: [
         ToolbarComponent,
@@ -41,6 +44,6 @@ import { TotalFigureComponent } from './miscellaneous/total-figure/total-figure.
         PrimeNgModule,
         LimeButtonComponent,
         TotalFigureComponent
-    ],
+    ]
 })
 export class SharedModule { }
