@@ -7,6 +7,10 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.modules';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthInterceptor } from './AuthInterceptor';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from '../reducers';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -18,6 +22,10 @@ import { AuthInterceptor } from './AuthInterceptor';
     SharedModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    StoreModule.forRoot(reducers, {
+      metaReducers
+    }),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
 
   providers: [

@@ -12,6 +12,8 @@ import { NumberOfDevicesPerSystemComponent } from './components/number-of-device
 import { NumberOfUsersPerLocationComponent } from './components/number-of-users-per-location/number-of-users-per-location.component';
 import { LinesPerUsageComponent } from './components/lines-per-usage/lines-per-usage.component';
 import { CallsComponent } from './components/calls/calls.component';
+import { StoreModule } from '@ngrx/store';
+import * as fromCoreReportState from './store';
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import { CallsComponent } from './components/calls/calls.component';
   imports: [
     CommonModule,
     CoreReportRoutingModule,
-    SharedModule
+    SharedModule,
+    StoreModule.forFeature(fromCoreReportState.coreReportStateFeatureKey, fromCoreReportState.reducers, { metaReducers: fromCoreReportState.metaReducers })
   ]
 })
 export class CoreReportModule { }

@@ -131,6 +131,7 @@
   },
   "defaultProject": "comchain-dashboard",
   "cli": {
+    "defaultCollection": "@ngrx/schematics",
     "analytics": false
   }
 }
