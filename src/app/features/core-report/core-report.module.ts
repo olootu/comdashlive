@@ -14,6 +14,8 @@ import { LinesPerUsageComponent } from './components/lines-per-usage/lines-per-u
 import { CallsComponent } from './components/calls/calls.component';
 import { StoreModule } from '@ngrx/store';
 import * as fromCoreReportState from './store';
+import { EffectsModule } from '@ngrx/effects';
+import { CoreReportEffects } from './store/core-report.effects';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import * as fromCoreReportState from './store';
     CommonModule,
     CoreReportRoutingModule,
     SharedModule,
-    StoreModule.forFeature(fromCoreReportState.coreReportStateFeatureKey, fromCoreReportState.reducers, { metaReducers: fromCoreReportState.metaReducers })
+    StoreModule.forFeature(fromCoreReportState.coreReportStateFeatureKey,
+      fromCoreReportState.reducers, { metaReducers: fromCoreReportState.metaReducers }),
+    EffectsModule.forFeature([CoreReportEffects])
   ]
 })
 export class CoreReportModule { }

@@ -6,11 +6,11 @@ import {
   MetaReducer
 } from '@ngrx/store';
 import { environment } from '../environments/environment';
-
+// tslint:disable-next-line:no-empty-interface
 export interface AppState {
 
 }
-
+// tslint:disable-next-line:no-empty-interface
 export const reducers: ActionReducerMap<AppState> = {
 
 };

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CoreReportsService } from '../services/core-report.service';
-import { Store } from '@ngrx/store';
-import { CoreReportState } from '../store';
+import { Store, select } from '@ngrx/store';
+import { CoreReportState, selectReports } from '../store';
 import * as fromActions from '../store/core-report.actions';
+import { Observable } from 'rxjs';
+import { Report } from '../models/report.model';
 
 @Component({
   selector: 'core-report',
@@ -10,6 +12,8 @@ import * as fromActions from '../store/core-report.actions';
   styleUrls: ['./core-report.component.scss']
 })
 export class CoreReportComponent implements OnInit {
+
+  report$: Observable<Report[]>;
 
   constructor(
     private http: CoreReportsService,
@@ -22,15 +26,7 @@ export class CoreReportComponent implements OnInit {
     this.loadReport();
   }
 
-  loadReport() {
-    this.http.getData()
-      .subscribe(report => {
-        this.store.dispatch(fromActions.loadCoreReportsSuccess({ report: report }));
-        console.log(report);
-      },
-        error => {
-          this.store.dispatch(fromActions.loadCoreReportsFailure({ error: error }));
-        });
+  loadReport(): void {
+    this.report$ = this.store.pipe(select(selectReports));
   }
-
 }

@@ -6,11 +6,11 @@ export const loadCoreReports = createAction(
 );
 
 export const loadCoreReportsSuccess = createAction(
-  '[CoreReport Home Component] Load CoreReports Success',
+  '[CoreReport Effect] Load CoreReports Success',
   props<{ report: Report[] }>()
 );
 
 export const loadCoreReportsFailure = createAction(
-  '[CoreReport Home Component] Load CoreReports Failure',
+  '[CoreReport Effect] Load CoreReports Failure',
   props<{ error: any }>()
 );
