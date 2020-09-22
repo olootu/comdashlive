@@ -13,9 +13,6 @@ import { NumberOfUsersPerLocationComponent } from './components/number-of-users-
 import { LinesPerUsageComponent } from './components/lines-per-usage/lines-per-usage.component';
 import { CallsComponent } from './components/calls/calls.component';
 
-import { StoreModule } from '@ngrx/store';
-import * as reportReducer from './state/core-report.reducer';
-
 
 @NgModule({
   declarations: [
@@ -33,8 +30,7 @@ import * as reportReducer from './state/core-report.reducer';
   imports: [
     CommonModule,
     CoreReportRoutingModule,
-    SharedModule,
-    StoreModule.forFeature(reportReducer.coreReportFeatureKey, reportReducer.reducer)
+    SharedModule
   ]
 })
 export class CoreReportModule { }
