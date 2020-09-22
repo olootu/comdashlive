@@ -1,3 +1,5 @@
 export interface Report {
-    report: [];
+    report: {};
+    load: any;
+    loading: any;
 }

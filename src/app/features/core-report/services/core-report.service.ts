@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ReportUrls } from '../../../shared/token/urls';
+import { Report } from '../models/report.model';
 
 
 @Injectable({
@@ -14,7 +15,7 @@ export class CoreReportsService {
 
   constructor(private http: HttpClient) { }
 
-  getData(): any {
-    return this.http.get<Observable<any>>(ReportUrls.GetCommunity).subscribe(data => { console.log(data); });
+  getData(): Observable<Report[]> {
+    return this.http.get<Report[]>(ReportUrls.GetCommunity);
   }
 }
